@@ -1,7 +1,7 @@
 <?php  include("../../head.php");
 include ('../../MyDB.php');
-$member_id = mysqli_real_escape_string($con,$_GET['Category_Number']);
-$sql = "SELECT * FROM Category WHERE Category_Number='$member_id' ";
+$member_id = mysqli_real_escape_string($con,$_GET['Tag_Number']);
+$sql = "SELECT * FROM tag WHERE Tag_Number='$member_id' ";
 $result = mysqli_query($con, $sql) or die ("Error in query: $sql " . mysqli_error());
 $row = mysqli_fetch_array($result);
 extract($row);
